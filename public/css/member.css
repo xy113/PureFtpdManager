@@ -1,0 +1,37 @@
+/* CSS Document */
+html,body{
+	background-position:center 20px;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	color:#fff;
+}
+.topbar{width:100%; height:30px; line-height:30px; background:#222; color:#fff; font-size:12px;}
+.topbar a{color:#eee;}
+.topbar a:hover{color:#fff; text-decoration:underline;}
+.topbar .menu a{margin-left:8px;}
+
+.main-body-div{display:block; position:relative;}
+.sign-box-div{position:absolute; right:0; top:50px; background-image:url(../images/common/translucent-40.png); padding:10px 0; width:300px; color:#fff; z-index:20;}
+.sign-box-div h3{display:block; padding:10px 30px; font-size:16px; border-bottom:3px #FFF solid;}
+.sign-box-div .sign-content{display:block; padding:0px 30px 20px;}
+.sign-box-div .input-div{background-color:#f9f9f9; border:0; display:block; height:40px; margin-top:20px; position:relative;}
+.sign-box-div .ico-box{width:40px; height:40px; background-color:#CCC; text-align:center; line-height:100%; display:block; float:left;}
+.sign-box-div .ico-box .icon{margin:0; line-height:40px; display:block; color:#666; width:100%;}
+.sign-box-div .input-box{height:40px; overflow:hidden;}
+.sign-box-div .input-box .text{padding:5px 10px; font-size:13px; box-sizing:border-box; width:100%; height:100%; border:0; background:none;}
+.sign-box-div .captcha{position:absolute; top:0; right:0; height:40px; z-index:10; cursor:pointer;}
+.sign-box-div .sign-button-div{margin-top:20px; display:block;}
+.sign-box-div .sign-button{display:block; width:100%; border:0; font-size:14px; cursor:pointer; height:40px; line-height:40px; text-align:center; background:#0ae; color:#fff; border-radius:2px;}
+.sign-box-div .sign-button:hover{background:#00a3d2;}
+.sign-box-div .sign-link{display:block; margin-top:15px; font-size:12px;}
+.sign-box-div .sign-link span{float:right;}
+.sign-box-div .sign-link a{color:#DDD;}
+.sign-box-div .sign-link a:hover{color:#fff; text-decoration:underline;}
+.sign-box-div .err-tips{display:block; color:#F00; margin-top:20px; display:none;}
+
+.footer{position:fixed; bottom:20px; z-index:10; display:block; width:100%; font-size:12px;}
+.footer a{color:#EEE;}
+.footer a:hover{color:#fff; text-decoration:underline;}
+.footer .bottomNav{padding:10px 0; text-align:center; font-size:13px;}
+.footer .bottomNav a{margin:0 3px;}
+.footer .copyright{text-align:center; display:block;}

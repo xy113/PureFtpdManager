@@ -1,0 +1,1220 @@
+@charset "UTF-8";
+@import url(ui.css);
+
+html, body {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: #fff;
+    /*-moz-osx-font-smoothing: grayscale;*/
+}
+
+a:link, a:active, a:visited {
+    color: #0074A2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+form, ul, li, ol, dd, dt, dl, p, h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body:after, div:after, p:after, ul:after, li:after, ol:after, dl:after, dd:after, dl:after, h1:after, h2:after, h3:after, h4:after, h5:after {
+    display: block;
+    clear: both;
+    overflow: hidden;
+    content: " ";
+}
+
+/**=======公用部分=======**/
+.clearfix {
+    clear: both;
+    line-height: 0px;
+    height: 0;
+    display: block;
+}
+
+.blank {
+    clear: both;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+}
+
+.text, .input-text, select, textarea {
+    box-sizing: border-box;
+    border: 1px #CCC solid;
+    border-radius: 1px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #fff;
+    height: 34px;
+    width: 300px;
+}
+
+.text, .input-text, select {
+    vertical-align: middle;
+}
+
+select {
+    width: auto;
+}
+
+select option {
+    padding: 5px;
+    border-bottom: 0.5px #DDD solid;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.input-text:hover, textarea:hover, select:hover {
+    border-color: #0086B6;
+    background-color: #fafafa;
+}
+
+.input-title {
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.button, .submit, a.button, a.submit {
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 1px;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: #2EA2CC;
+    color: #fff;
+    border: 1px #2EA2CC solid;
+}
+
+.button:hover, .submit:hover {
+    background-color: #1e8cbe;
+    color: #fff;
+    border-color: #1e8cbe;
+}
+
+.cancel {
+    background-color: #F8F8F8;
+    border: 1px #DDD solid;
+    color: #666;
+}
+
+.cancel:hover {
+    border-color: #CCC;
+    background-color: #E8E8E8;
+    color: #333;
+}
+
+.button-publish {
+    width: 160px;
+    height: 80px;
+    font-size: 22px;
+}
+
+.checkbox, .radio, input[type=radio], input[type=checkbox] {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    vertical-align: -1px;
+    box-sizing: border-box;
+}
+
+.w30 {
+    width: 30px;
+}
+
+.w60 {
+    width: 60px;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.w200 {
+    width: 200px;
+}
+
+.w300 {
+    width: 300px;
+}
+
+.w400 {
+    width: 400px;
+}
+
+.w500 {
+    width: 500px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.padding0 {
+    padding: 0;
+}
+
+.border0 {
+    border: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.area {
+    overflow: hidden;
+    display: block;
+}
+
+.header {
+    height: 30px;
+    color: #ccc;
+    background: #0098CE;
+    font: 13px/30px Arial;
+    position: fixed;
+    z-index: 103;
+    width: 100%;
+    display: block;
+}
+
+.header a:link, .header a:visited, .header a:active {
+    color: #eee;
+}
+
+.header .icon {
+    margin: 0;
+    height: auto;
+    vertical-align: 0;
+    font-size: 14px;
+    line-height: 1.0;
+}
+
+.header .item {
+    float: left;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+.header .item .menuitem {
+    display: block;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.header .item .menuitem:hover {
+    background: #0086B6;
+    color: #fff;
+}
+
+.header .cur, .header .cur a {
+    background: #0086B6;
+    color: #fff;
+}
+
+.header .item ul {
+    position: absolute;
+    top: 30px;
+    background: #0086B6;
+    color: #fff;
+    z-index: 300;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.header .item .submenu {
+    width: 110px;
+    left: 0;
+}
+
+.header .item .submenu li {
+    clear: both;
+    text-align: left;
+}
+
+.header .item .submenu li a {
+    border: none;
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.header .item .submenu li a:hover {
+    background: #0086B6;
+}
+
+.header .account {
+    float: right;
+    width: auto !important;
+    width: 160px;
+}
+
+.header .account a img {
+    display: inline-block;
+    vertical-align: -5px;
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    border-radius: 2px;
+}
+
+.header ul.profile {
+    width: 220px;
+    right: 0px;
+    padding: 10px;
+    overflow: hidden;
+    color: #fff;
+    line-height: 26px;
+}
+
+.header ul.profile .atvar {
+    float: left;
+    margin-right: 20px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    clear: none;
+}
+
+.header ul.profile .atvar:after {
+    clear: both;
+    display: block;
+}
+
+.header ul.profile .atvar img {
+    border: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-top: 9px;
+}
+
+.header ul.profile .actions {
+    overflow: hidden;
+}
+
+.header ul.profile a:hover {
+    text-decoration: underline;
+}
+
+/*=====左边菜单====*/
+.sidebar {
+    width: 120px;
+    background: #293038;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    bottom: 0;
+    z-index: 102;
+}
+
+.sidebar #sidebar-content {
+    display: block;
+    width: 140px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.sidebar h3 {
+    height: 35px;
+    line-height: 35px;
+    background: #22282E;
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+}
+
+.sidebar h3 a {
+    display: block;
+    padding: 0 11px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar h3 a:hover {
+    background: #000;
+}
+
+.sidebar ul {
+    clear: both;
+}
+
+.sidebar ul li {
+    line-height: 35px;
+    height: 35px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #fff;
+    padding: 0 0 0 33px;
+    background-color: #222;
+}
+
+.sidebar ul li a.on {
+    background-color: #0074A2;
+    color: #fff;
+}
+
+.sidebar ul li a:hover {
+    background: #000;
+}
+
+.sidebar .icon {
+    vertical-align: 1px;
+    font-size: 14px;
+    margin: 0 8px 0 0;
+    width: auto;
+    height: auto;
+}
+
+.mainframe {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    left: 120px;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    width: auto;
+}
+
+.mainframe .iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/**=========终端提示=========**/
+.console-title {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px #DDD solid;
+    margin-bottom: 20px;
+}
+
+.console-title h2 {
+    font-size: 18px;
+    line-height: 1.1;
+    display: inline-block;
+    margin: 5px 0 0;
+    border-left: 3px #2EA2CC solid;
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+.toolbar {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.toolbar .baritem {
+    background: #D9DEE4;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 1px;
+    padding: 0 15px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #555;
+}
+
+.toolbar .baritem:hover {
+    background-color: #536479;
+    color: #fff;
+}
+
+/**==========发布文章==========**/
+.post-image-box {
+    width: 130px;
+    height: 130px;
+    border: 1px #DDD solid;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.post-image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.post-image-div {
+    border: 1px #CCC solid;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.post-image-title {
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    padding: 0 10px;
+    background: #f8f8f8;
+    border-bottom: 1px #DDD solid;
+    text-align: right;
+}
+
+.post-image-container {
+    display: block;
+    height: 400px;
+    overflow: hidden;
+}
+
+.post-image-div .upload-button {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.post-image-div .upload-button .hd {
+    display: block;
+    position: relative;
+}
+
+.post-image-div .upload-button .swfbutton {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.post-image-div .upload-button .button {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.post-image-div .pick-button {
+    position: absolute;
+    top: 8px;
+    left: 116px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.post-image-div .upload-button .icon,
+.post-image-div .pick-button .icon {
+    font-size: 14px;
+    vertical-align: 0px;
+    display: inline;
+    height: auto;
+    margin-right: 3px;
+    width: auto;
+}
+
+.post-image-scroll {
+    height: 400px;
+    display: block;
+    margin: 0 -20px 0 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.post-image-queue {
+    display: block;
+    margin: 0 15px 10px 5px;
+}
+
+.post-image-queue .item {
+    width: 16.66%;
+    margin: 10px 0;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.post-image-queue .item .box {
+    border: 1px #DDD solid;
+    border-radius: 3px;
+    margin: 0 5px;
+    display: block;
+    position: relative;
+}
+
+.post-image-queue .item .pic {
+    display: block;
+    position: relative;
+    padding-top: 100%;
+    background: url(../images/common/loading32.gif) center center no-repeat #f5f5f5;
+}
+
+.post-image-queue .item .pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.post-image-queue .item .textarea {
+    width: 100%;
+    padding: 5px;
+    height: 60px;
+    border: 0;
+    resize: none;
+    font-size: 12px;
+}
+
+.post-image-queue .item .delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    width: auto;
+    height: auto;
+    display: none;
+}
+
+.post-image-queue .item:hover .delete {
+    display: block;
+}
+
+/**=====首页=====**/
+.about-h2-title {
+    padding: 20px 0;
+    font-size: 22px;
+}
+
+.about-content {
+    background: #fff;
+    border: 1px #ddd solid;
+}
+
+.about-content .content-title {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px #ddd solid;
+}
+
+.about-content .frame0 {
+    padding: 20px;
+    width: 30%;
+    float: left;
+}
+
+.about-content .frame0:after {
+    clear: both;
+    display: block;
+    content: " ";
+}
+
+.about-content .frame0 .title {
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.about-content .frame0 .item {
+    font-size: 14px;
+}
+
+.about-content .frame0 .button {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.about-content .textfield {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    padding: 10px;
+    text-align: justify;
+}
+
+.about-content ul {
+    clear: both;
+    padding: 10px;
+}
+
+.about-content ul li {
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+.about-content ul li span {
+    float: right;
+}
+
+.about-content p {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+.about-left {
+    width: 49%;
+    float: left;
+    margin: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.about-right {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/**表单表格**/
+.formtable {
+    clear: both;
+    table-layout: auto;
+}
+
+.formtable th, td {
+    padding: 7px 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+.formtable thead th {
+    background-color: #f2f2f2;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px #ddd solid;
+}
+
+.formtable tbody tr:hover td {
+    color: #0086B6;
+}
+
+.formtable tbody th {
+    font-weight: bold;
+}
+
+.formtable tfoot {
+    padding: 10px 5px;
+}
+
+.formtable tfoot .button, .formtable tfoot .submit {
+    margin-right: 10px;
+}
+
+.formtable .tips {
+    font-size: 12px;
+    color: #666;
+}
+
+/**列表表格**/
+.table-hd, .table-wrap {
+    border: 1px #CCC solid;
+    border-radius: 2px;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.listtable {
+    background: #fff;
+    font-size: 12px;
+}
+
+.listtable th, .listtable td {
+    padding: 8px 10px;
+}
+
+.listtable thead th {
+    background-color: #f5f6fa;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px #ddd solid;
+}
+
+.listtable tbody td,
+.listtable tbody th {
+    background-color: #fff;
+    border-bottom: 0.8px #DDD solid;
+}
+
+.listtable tbody th {
+    font-size: 12px;
+    text-align: left;
+}
+
+.listtable tbody td .cover {
+    width: 50px;
+    height: 50px;
+    background-color: #F2F2F2;
+    background-size: cover;
+    display: block;
+}
+
+.listtable tbody tr:hover th,
+.listtable tbody tr:hover td {
+    background: #f9f9f9;
+}
+
+.listtable tfoot td, .listtable tfoot th {
+    background-color: #F5F6FA;
+}
+
+.listtable tfoot .pages {
+    float: right;
+}
+
+.listtable tfoot label {
+    margin-right: 3px;
+}
+
+.listtable tfoot .button, .listtable tfoot .submit {
+    margin-right: 10px;
+}
+
+.listtable .center {
+    text-align: center;
+}
+
+.listtable .tips {
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.listtable .icon {
+    font-size: 14px;
+    height: 24px;
+    width: 20px;
+    font-weight: normal;
+    vertical-align: 1px;
+}
+
+.listtable .cat-level {
+    height: 26px;
+    background-image: url(../images/admin/join.png);
+    background-position: left center;
+    background-size: auto auto;
+    background-repeat: repeat-x;
+    display: block;
+    float: left;
+    vertical-align: middle;
+}
+
+.listtable .cat-level-1 {
+    width: 0;
+}
+
+.listtable .cat-level-2 {
+    width: 30px;
+}
+
+.listtable .cat-level-3 {
+    width: 60px;
+}
+
+.postbody {
+    background: #fff;
+    border: 1px #ccc solid;
+}
+
+.postbody .postcontent {
+    padding: 9px 5px 5px 7px;
+}
+
+.menu-header {
+    padding: 10px;
+    clear: both;
+    background-color: #F0F0F0;
+    font-size: 14px;
+    border-bottom: 1px #ccc solid;
+}
+
+.menu-footer {
+    padding: 10px;
+    clear: both;
+    background-color: #F0F0F0;
+    font-size: 14px;
+    border-top: 1px #ccc solid;
+}
+
+.nav-left {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    border: 1px #ccc solid;
+    background: #fff;
+}
+
+.nav-left .content {
+    padding: 10px;
+}
+
+.nav-left .content select {
+    width: 180px;
+    height: 300px;
+}
+
+.nav-right {
+    overflow: hidden;
+    border: 1px #ccc solid;
+    background: #fff;
+}
+
+.nav-right .nav-class {
+    padding: 15px 10px;
+    font-size: 18px;
+    border-bottom: 1px #ccc solid;
+}
+
+.nav-right .nav-class .icon {
+    font-size: 20px;
+    vertical-align: 0px;
+}
+
+.nav-right .nav-item {
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    clear: both;
+    border-bottom: 1px #ccc solid;
+    position: relative;
+}
+
+.nav-right .nav-item:after {
+    clear: both;
+    display: block;
+    height: 0;
+    content: " ";
+}
+
+.nav-right .nav-item .nav-title {
+    width: 15%;
+    float: left;
+    padding-right: 10px;
+}
+
+.nav-right .nav-item .nav-url {
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+}
+
+.nav-right .nav-item .nav-position {
+    width: 10%;
+    float: left;
+}
+
+.nav-right .nav-item .nav-target {
+    width: 14%;
+    float: left;
+}
+
+.nav-right .nav-item .nav-available {
+    overflow: hidden;
+}
+
+.nav-right .nav-item .delete {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}
+
+.comment-content {
+    padding: 15px 15px 0 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+.comment-attr {
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+    clear: both;
+}
+
+.perm-content {
+    background: #fff;
+    border: 1px #ddd solid;
+}
+
+.perm-item {
+    padding: 10px;
+    line-height: 1.5;
+    clear: both;
+}
+
+.perm-title {
+    padding: 10px;
+    font-size: 15px;
+    clear: both;
+}
+
+.perm-tips {
+    padding: 10px;
+    clear: both;
+}
+
+.pages-left-frame {
+    width: 75%;
+    margin-right: 20px;
+    float: left;
+    overflow: hidden;
+}
+
+.pages-right-frame {
+    overflow: hidden;
+}
+
+.pages-content {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.pages-title-input {
+    padding: 3px 8px;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pages-content .subdiv {
+    background: #fff;
+    border: 1px #ccc solid;
+    display: block;
+}
+
+.pages-content .subdiv .handle {
+    border-bottom: 1px #ccc solid;
+    padding: 10px;
+    font: bold 13px '';
+}
+
+.pages-content .subdiv .content {
+    padding: 10px;
+}
+
+.pages-content .subdiv .content h3, .pages-content .subdiv .content p {
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.pages-content .subdiv .content .select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pages-content .subdiv .content #upload-image {
+    position: relative;
+}
+
+.pages-content .subdiv .content .file {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: visible;
+}
+
+.pages-content .subdiv .content .input-text {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sysmessage {
+    background: #fff;
+    clear: both;
+    border: 1px #ccc solid;
+    padding: 50px 0;
+    margin: 50px auto;
+    width: 70%;
+}
+
+.sysmessage h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sysmessage h3.success {
+    color: #060;
+}
+
+.sysmessage h3.error {
+    color: #F00;
+}
+
+.sysmessage h3.infomation, .sysmessage h3.warning {
+    color: #333;
+}
+
+.sysmessage .tips {
+    text-align: center;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.sysmessage .links {
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.sysmessage .links a {
+    margin: 0 3px;
+}
+
+
+#footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 9px 0 7px;
+    line-height: 29px;
+}
+
+#footer a {
+    color: #333;
+}
+
+/**=======分页======**/
+.pages {
+    float: right;
+    white-space: nowrap;
+}
+
+.pages a, .pages span {
+    display: inline-block;
+    margin: 0 0 0 -1px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0 7px;
+    box-sizing: border-box;
+    border: 1px #CCC solid;
+    color: #666;
+}
+
+.pages a:hover {
+    color: #000;
+    background: none;
+}
+
+.pages .cur {
+    color: #fff;
+    background: #0086B5;
+    border-color: #0086B5;
+}
+
+/**========表格视图=======**/
+.tableview {
+    display: block;
+    border: 1px #CCC solid;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.tableview .row {
+    display: block;
+    clear: both;
+    border-bottom: 0.8px #DDD solid;
+}
+
+.tableview .cell {
+    float: left;
+    padding: 8px 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.tableview .theader, .tableview .tfooter {
+    background: #f5f5f5;
+    padding: 10px 5px;
+    min-height: 26px;
+}
+
+.tableview .theader {
+    border-bottom: 1px #CCC solid;
+}
+
+.formtable .cell {
+    padding: 5px 10px;
+    border-bottom: none;
+}
+
+.formtable .row {
+    border-bottom: 0;
+}

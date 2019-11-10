@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fc3e7798-4b16-4261-93f9-9469702082ed" name="aliyun" url="http://pureftp.songdewei.com">
+        <fileTransfer host="47.108.50.187" port="21" rootFolder="/www.songdewei.com/pureftp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
